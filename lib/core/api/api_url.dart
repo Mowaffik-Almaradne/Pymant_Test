@@ -5,7 +5,7 @@ import 'package:flutter/foundation.dart';
 class ApiUrl {
   late String _link;
   //? host Name :
-  static const String hostName = "fakestoreapi.com";
+  static const String hostName = "";
   //? base Url :
   static const String baseUrl = "https://$hostName/";
   ApiUrl(this._link);
