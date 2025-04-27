@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:new_experinse/core/class/payment_card_info_class.dart';
 import 'package:new_experinse/features/auth/presentation/domain/entities/req/loing_request_entity.dart';
 import 'package:new_experinse/features/auth/presentation/pages/login_page.dart';
 import 'package:new_experinse/features/home/presentation/pages/home_page.dart';
@@ -75,7 +74,7 @@ class AppRouter {
       GoRoute(
         path: RouteNamedScreens.paymentCardInfoNameRoute,
         builder: (BuildContext context, GoRouterState state) {
-          final objCard = state.extra as PaymentCardInfoClass;
+          final objCard = state.extra as String;
           return PaymentCardInfoPage(
             nameCard: objCard,
           );

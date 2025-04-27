@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:new_experinse/core/class/payment_card_info_class.dart';
-import 'package:new_experinse/core/resource/text_manger.dart';
 import 'package:new_experinse/core/widget/text_utiles/main_text_utiles.dart';
 import 'package:new_experinse/router/app_router.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -17,18 +15,10 @@ class CardPaymentWidget extends StatelessWidget {
   final Color? colorTextCard;
   @override
   Widget build(BuildContext context) {
-    PaymentCardInfoClass cardInfoClass =
-        PaymentCardInfoClass(isCard: false, nameCard: typeCard);
     return InkWell(
       onTap: () {
-        if (typeCard == AppTextManger.bankTransfer) {
-          cardInfoClass.isCard = true;
-          context.push(RouteNamedScreens.paymentCardInfoNameRoute,
-              extra: cardInfoClass);
-        } else {
-          context.push(RouteNamedScreens.paymentCardInfoNameRoute,
-              extra: cardInfoClass);
-        }
+        context.push(RouteNamedScreens.paymentCardInfoNameRoute,
+              extra: typeCard);
       },
       child: Card(
         margin: EdgeInsets.only(bottom: 3.h),
